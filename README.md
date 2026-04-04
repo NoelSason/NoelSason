@@ -80,10 +80,5 @@ I think in systems. I care about execution. I ship.
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=noelsason&show_icons=true&theme=default&hide_border=true&count_private=true" alt="GitHub Stats" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=noelsason&hide_border=true" alt="GitHub Streak" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=noelsason&hide_border=true" alt="GitHub Streak" />
 </p>
-
----
-
-<p align="center"><i>I build tools students actually use. If that resonates, let's talk.</i></p>
