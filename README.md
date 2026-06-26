@@ -20,6 +20,7 @@ Canvas LMS search is broken. Students know *what* they're looking for but not *w
 - Privacy-first — your data never leaves your browser
 - Works across multiple university Canvas domains
 - Intent-aware: searching for a due lab also surfaces related PDFs, modules, and undated materials
+- A built-in AI agent that *acts*, not just answers — it reasons in steps, reads your deadlines/grades/calendar, and drafts the to-dos, events, and study plans, with a daily briefing and a hard wall that keeps it from ever submitting your work
 
 This isn't a feature bolted onto Canvas. It's a fundamentally better way to interact with LMS data.
 
@@ -38,6 +39,7 @@ Not another note-taking app. Lectra is the operating system for your coursework.
 - Full-text search across everything
 - Offline-first — works without Wi-Fi, syncs when connected
 - Shared indexing layer with Canvascope
+- A real coding workspace on iPad — terminal, git, and Python notebooks running fully sandboxed on-device (hand-built shell + git + Python runtime, no cloud)
 
 **What's next:**
 - **Course Brain** — a knowledge graph connecting all your course materials
