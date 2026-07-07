@@ -2,9 +2,9 @@
 
 **Builder. Student. Founder.**
 
-I'm studying Molecular & Cell Biology + Data Science at UC Berkeley. I build products that fix broken workflows for students — tools I wish existed when I started.
+I'm studying Molecular & Cell Biology + Data Science at UC Berkeley. I build products that fix broken workflows for the people who have to live inside them — students, clinicians, litigants, AI agents.
 
-Right now, I'm focused on two things: **Canvascope** and **Lectra**.
+Right now, I split my time across **Canvascope**, **Lectra**, and **RxBrief**, with a couple of smaller tools shipped alongside them.
 
 ---
 
@@ -43,20 +43,61 @@ Not another note-taking app. Lectra is the operating system for your coursework.
 
 **What's next:**
 - **Course Brain** — a knowledge graph connecting all your course materials
-- **Control Center** — Canvas + Gmail + Calendar in one unified hub
 
 `iOS` · `Web` · `Supabase` · `Offline-first architecture`
+
+---
+
+### 💊 RxBrief
+
+**One tool instead of ten tabs, for clinicians.**
+
+Every feature was scoped directly from interviews with healthcare professionals — it solves the problems they actually named.
+
+- Instant FDA-sourced label data — indications, dosing, interactions — instead of digging through PDF inserts
+- Job openings from Greenhouse, Lever, and RSS feeds normalized into one server-filtered feed
+- Real-time Supabase chat keeping the conversation in-app
+
+`Next.js` · `React` · `TypeScript` · `Supabase` · `FDA API`
+
+---
+
+### 🧠 PersonalGraph MCP
+
+**A local-first memory server for AI agents.**
+
+Gives any MCP-compatible AI client (Claude Desktop, Claude Code, Cursor) structured, queryable memory about its user instead of starting every conversation from zero — it's the exact system behind this profile's own AI-assisted workflows.
+
+- 16 MCP tools, 5 resources, and 4 prompt templates over a typed personal-knowledge graph
+- Four-tier privacy model (public/ai\_allowed/private/sensitive) with secret redaction and append-only audit logging
+- Swappable storage interface — JSON today, a documented path to Neo4j/SQLite/Postgres
+
+`TypeScript` · `Node.js` · `MCP SDK` · `Zod`
+
+---
+
+### ⚖️ SCI Cause-List Alerts
+
+**Closing an information gap for Indian Supreme Court litigants.**
+
+Rather than requiring a lawyer or daily manual lookup, a scheduled worker checks whether a subscriber's case is on tomorrow's cause list and emails them proactively — built for people who lack easy access to legal counsel or repeated court-website checks.
+
+- Daily worker parses government-published cause-list PDFs and matches them against subscriber watch-lists
+- Idempotent, audited email delivery with self-monitoring that flags failed runs
+- Bot-protected signup (Cloudflare Turnstile) and IP rate limiting (Upstash Redis)
+
+`Next.js` · `TypeScript` · `Prisma` · `PostgreSQL` · `Upstash Redis`
 
 ---
 
 ## Tech Stack
 
 ```
-Languages        Python · Java · JavaScript
-Frontend         Chrome Extensions (Mv3) · Web
-Backend          Supabase (auth, storage, data) · Node
-Infra            Vercel · GitHub Actions · CLI tooling
-Tools            Git · GitHub · Automation workflows
+Languages        Python · Java · Swift/SwiftUI · TypeScript · JavaScript · SQL
+Frontend         Chrome Extensions (MV3) · Next.js · React · Web
+Backend          Supabase (auth, storage, data) · Node · Prisma · PostgreSQL · Flask
+Infra            Vercel · GitHub Actions · CLI tooling · Upstash Redis
+Tools            Git · GitHub · MCP · Automation workflows
 ```
 
 ---
