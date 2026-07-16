@@ -34,17 +34,18 @@ This isn't a feature bolted onto Canvas. It's a fundamentally better way to inte
 
 Not another note-taking app. Lectra is the operating system for your coursework.
 
-- Rich text + Markdown editor with PDF annotation (Apple Pencil optimized)
+- Rich text + Markdown editor with PDF annotation (Apple Pencil optimized) — now **real-time collaborative**: open the same document and watch each other's ink appear live
 - Course-based organization with assignment linking
 - Full-text search across everything
 - Offline-first — works without Wi-Fi, syncs when connected
 - Shared indexing layer with Canvascope
-- A real coding workspace on iPad — terminal, git, and Python notebooks running fully sandboxed on-device (hand-built shell + git + Python runtime, no cloud)
+- A real coding workspace on iPad — a terminal (with **SSH**), git, and Python notebooks running fully sandboxed on-device (hand-built shell + git + Python runtime, no cloud), plus a **Claude-powered coding agent** that plans, edits, and runs your tests with per-step approval
+- **Mac ↔ iPad remote desktop** over WebRTC — reach your actual Mac from the iPad, from anywhere
 
 **What's next:**
 - **Course Brain** — a knowledge graph connecting all your course materials
 
-`iOS` · `Web` · `Supabase` · `Offline-first architecture`
+`iOS` · `Web` · `Supabase` · `Offline-first architecture` · `Real-time collab` · `WebRTC`
 
 ---
 
