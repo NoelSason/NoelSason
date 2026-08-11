@@ -13,7 +13,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/UC_Berkeley-003262?style=for-the-badge&logo=googlescholar&logoColor=FDB515" alt="UC Berkeley" />
   <img src="https://img.shields.io/badge/MCB_+_Data_Science-414868?style=for-the-badge" alt="MCB + Data Science" />
-  <img src="https://img.shields.io/badge/Class_of_Dec_2027-70a5fd?style=for-the-badge&logoColor=white" alt="Dec 2027" />
+  <img src="https://img.shields.io/badge/Class_of_2028-70a5fd?style=for-the-badge&logoColor=white" alt="Class of 2028" />
 </p>
 
 <p align="center">
@@ -23,11 +23,13 @@
 
 <!-- ══════════════════════════ SNAKE ══════════════════════════ -->
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake.svg" />
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake.svg" />
-</picture>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake-dark.svg?v=2" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake.svg?v=2" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake.svg?v=2" width="100%" />
+  </picture>
+</p>
 
 ---
 
@@ -104,7 +106,7 @@ Named for George Pólya.
 
 <sub>`Swift 6` · `SwiftUI + UIKit` · `Chrome MV3` · `Next.js` · `Supabase` · `WebRTC` · `WebAssembly` · `Offline-first`</sub>
 
-<sub>📊 As of 2026-08-11 — 58 Chrome Web Store installs · 56 registered accounts · 40,052 documents synced across 68 devices · Lectra v5.0. Free for students; there's no paid tier.</sub>
+<sub>📊 As of 2026-08-11 — ~90 students across the extension and Lectra · 40,052 documents synced across 68 devices · Lectra v5.0. Free for students; there's no paid tier.</sub>
 
 ---
 
