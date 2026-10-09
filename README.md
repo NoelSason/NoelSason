@@ -106,7 +106,7 @@ Named for George Pólya.
 
 <sub>`Swift 6` · `SwiftUI + UIKit` · `Chrome MV3` · `Next.js` · `Supabase` · `WebRTC` · `WebAssembly` · `Offline-first`</sub>
 
-<sub>📊 As of 2026-08-11 — ~90 students across the extension and Lectra · 40,052 documents synced across 68 devices · Lectra v5.0. Free for students; there's no paid tier.</sub>
+<sub>📊 As of October 2026 — 400+ students across 20+ colleges and universities · 58,000+ course files, pages, and assignments synced. Free for students; there's no paid tier.</sub>
 
 ---
 
@@ -160,7 +160,48 @@ other people can actually run analyses on.
 
 <sub>`Python` · `DuckDB` · `Ontologies` · `uv` · `Just`</sub>
 
+### 🧮 Computational Approaches to Human Learning Lab, UC Berkeley
+
+**Undergraduate Researcher — OATutor**
+
+[OATutor](https://github.com/CAHLR/OATutor) is the lab's open-source adaptive math tutor. It uses
+**Bayesian Knowledge Tracing** to estimate what each student has mastered: after every answer it
+updates the probability that they know each skill, weighing the chance they guessed or slipped, and
+it serves the problem they're weakest on until every skill clears a 0.85 mastery threshold.
+
+- My project: per-image alt text for screen-reader users, carried from the spreadsheets authors
+  write in, through the Python scripts that compile them into problem files, to the React components
+  that render problems, steps, and hints
+- Tested the lab's GPT-4o alt-text generator against the original graphs before it ran on more
+  courses. It misread coordinates, endpoints, and open vs. closed points, so its output stayed out of
+  the course content
+
+<sub>`Python` · `React` · `Bayesian Knowledge Tracing` · `Accessibility`</sub>
+
+### 🧠 Imagined-Speech EEG Benchmark Audit &nbsp;<sub>[paper](https://noelsason.com/papers/sason-2026-imagined-speech-eeg-audit.pdf) · [code](https://github.com/NoelSason/eegwords)</sub>
+
+A published benchmark reports **13.88%** accuracy at telling 39 categories of imagined words apart
+from EEG. Copying the label of the previous training trial, with no EEG at all, scores **18.8%**,
+because the trials run in category clusters and every test trial sits inside a training run.
+
+- Simple per-trial EEG statistics identify a held-out trial's recording run with 98.8% accuracy
+- With whole runs held out, real labels beat shuffled ones by only 0.64 points, within seed noise
+- Every number in the paper is generated from saved results and traced claim by claim
+
+<sub>One participant, self-published, not peer reviewed. `PyTorch` · `Experiment design` · `Evaluation`</sub>
+
 <sub>🔬 Plus something early I'm not talking about yet.</sub>
+
+<!-- ══════════════════════════ OPEN SOURCE ══════════════════════════ -->
+
+<h2 align="center">═══ ✦ Open Source ✦ ═══</h2>
+
+- **[PyodideKit](https://github.com/NoelSason/PyodideKit)** — real Python inside an iPhone, iPad,
+  or Mac app, with no server and no network. NumPy, pandas, matplotlib, and offline `pip install`
+  all work. Pulled out of Lectra, where it runs for real users. <sub>`Swift` · `WebAssembly` · MIT</sub>
+- **[ios-agent-use](https://github.com/NoelSason/ios-agent-use)** — lets a coding agent open a real
+  iOS app, tap through it, and get back a written account of what changed on screen. Installs as a
+  Claude Code plugin. <sub>`Python` · `XCUITest` · MIT</sub>
 
 <!-- ══════════════════════════ COMMUNITY ══════════════════════════ -->
 
