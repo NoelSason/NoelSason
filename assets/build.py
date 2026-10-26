@@ -33,7 +33,7 @@ UBIQUITIN = "MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTL
 # Table 1. (where, what, status)
 ROWS = [
     ("Lewis Lab, UC Berkeley", "peptide design for a mitochondrial RNA-degradation complex", "learning"),
-    ("CAHL Lab, UC Berkeley", "alt text for every problem image in OATutor", "building"),
+    ("CAHL Lab, UC Berkeley", "accessible math figures in a Bayesian knowledge-tracing tutor", "building"),
     ("Berkeley Lab", "microbe traits across disease studies, on KG-Microbe", "analysis"),
     ("Scope Tutor-1", "does QLoRA on tutoring dialogues beat a good prompt?", "training"),
     ("Scope", "Lectra, Polya, and the extension, used by 400+ students", "shipping"),
@@ -98,8 +98,8 @@ def attention_heads():
 
 def header(theme):
     c = THEMES[theme]
-    width, height = 1000, 392
-    x0, x1, baseline = 42, 958, 334
+    width, height = 1000, 404
+    x0, x1, baseline = 6, 994, 334
     pitch = (x1 - x0) / (len(UBIQUITIN) - 1)
     foot = baseline - 14
     cycle, heads = 16, attention_heads()
@@ -156,15 +156,15 @@ def header(theme):
 @keyframes show{{0%{{opacity:0}}4%,22%{{opacity:1}}27%,100%{{opacity:0}}}}
 @media (prefers-reduced-motion:reduce){{.a,.m{{animation:none}}}}"""
 
-    body = f"""<text class="eyebrow" x="44" y="58">UC BERKELEY  ·  MOLECULAR &amp; CELL BIOLOGY + DATA SCIENCE  ·  2028</text>
-<text class="name" x="38" y="146">Noel Sason</text>
-<text class="tag" x="42" y="194">How do you know a model does what its number says?</text>
+    body = f"""<text class="eyebrow" x="2" y="58">UC BERKELEY  ·  MOLECULAR &amp; CELL BIOLOGY + DATA SCIENCE  ·  2028</text>
+<text class="name" x="-3" y="146">Noel Sason</text>
+<text class="tag" x="0" y="194">How do you know a model does what its number says?</text>
 <g class="ghost">{''.join(ghost)}</g>
 <g class="live">{''.join(live)}</g>
 <g class="seq">{residues}</g>
 <g class="marks">{''.join(marks)}</g>
 <g class="label">{''.join(labels)}</g>
-<text class="fig" x="{x0 - 2}" y="376">Fig. 1. Toy attention heads over human ubiquitin, 76 residues. Illustrative, not from a trained model.</text>"""
+<text class="fig" x="1" y="378">Fig. 1. Toy attention heads over human ubiquitin, 76 residues. Illustrative, not from a trained model.</text>"""
 
     title = "Noel Sason. UC Berkeley, Molecular & Cell Biology + Data Science, 2028."
     return svg(width, height, title, style, body)
@@ -176,7 +176,7 @@ def header(theme):
 def table(theme):
     c = THEMES[theme]
     width = 1000
-    left, what_x, status_x, right = 40, 292, 846, 960
+    left, what_x, status_x, right = 1, 254, 868, 999
     top, head_y, mid, first, step = 58, 84, 98, 136, 42
     bottom = first + step * (len(ROWS) - 1) + 20
     height = bottom + 12
@@ -204,8 +204,8 @@ def table(theme):
 @keyframes pulse{{0%,100%{{opacity:1}}50%{{opacity:.25}}}}
 @media (prefers-reduced-motion:reduce){{.dot{{animation:none}}}}"""
 
-    body = f"""<text class="tlabel" x="{left + 2}" y="30">TABLE 1</text>
-<text class="tcap" x="{left + 100}" y="31">What I am working on, {esc(TABLE_DATE)}.</text>
+    body = f"""<text class="tlabel" x="{left + 1}" y="30">TABLE 1</text>
+<text class="tcap" x="{left + 94}" y="31">What I am working on, {esc(TABLE_DATE)}.</text>
 <line class="rule" x1="{left}" x2="{right}" y1="{top}" y2="{top}" stroke-width="1.4"/>
 <text class="th" x="{left}" y="{head_y}">WHERE</text>
 <text class="th" x="{what_x}" y="{head_y}">WHAT</text>

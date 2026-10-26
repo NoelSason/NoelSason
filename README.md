@@ -15,7 +15,7 @@ biology from making it easier to misuse.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/table-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/table-light.svg">
-  <img alt="Table 1. What I am working on, October 2026. Lewis Lab, UC Berkeley: peptide design for a mitochondrial RNA-degradation complex (learning). CAHL Lab, UC Berkeley: alt text for every problem image in OATutor (building). Berkeley Lab: microbe traits across disease studies, on KG-Microbe (analysis). Scope Tutor-1: does QLoRA on tutoring dialogues beat a good prompt? (training). Scope: Lectra, Polya, and the extension, used by 400+ students (shipping)." src="assets/table-light.svg" width="100%">
+  <img alt="Table 1. What I am working on, October 2026. Lewis Lab, UC Berkeley: peptide design for a mitochondrial RNA-degradation complex (learning). CAHL Lab, UC Berkeley: accessible math figures in a Bayesian knowledge-tracing tutor (building). Berkeley Lab: microbe traits across disease studies, on KG-Microbe (analysis). Scope Tutor-1: does QLoRA on tutoring dialogues beat a good prompt? (training). Scope: Lectra, Polya, and the extension, used by 400+ students (shipping)." src="assets/table-light.svg" width="100%">
 </picture>
 
 ### Research
@@ -45,42 +45,35 @@ points, which is within seed noise. One participant.
 
 **Scope Tutor-1** &nbsp;<sub>post-training · in progress</sub><br>
 Does QLoRA fine-tuning on tutoring dialogues make Qwen3-4B a better tutor than the same model with
-a well-written prompt? The prompt it has to beat is frozen, no test problem appears in training,
-and the endpoint was written down before any model was trained. Runs are going now on MLX, nothing
-has been scored on the held-out problems, and the prompt may well win.
+a well-written prompt? The prompt is frozen, test problems never appear in training, and the
+endpoint was fixed before training started. Nothing has been scored yet, and the prompt may win.
 
 **Fabric** &nbsp;<sub>self-supervised vision · null result</sub><br>
-A pre-registered test of an uncertainty-routing method across eight seeds. It found no supported
-improvement from hierarchical targets under the tested protocol, so I closed the study with the
-results and analysis written up. Synthetic data only, and no real-image result is claimed.
+A pre-registered test of an uncertainty-routing method across eight seeds found no supported
+improvement from hierarchical targets, so I closed the study and wrote it up. Synthetic data only.
 
 **Checking a model's alt text** &nbsp;<sub>CAHL Lab · [OATutor](https://github.com/CAHLR/OATutor)</sub><br>
-Before the lab's GPT-4o alt-text generator ran on more courses, I tested it against the original
-graphs. It misread coordinates, endpoints, and open versus closed points, so its output stayed out
-of the course content. My project carries hand-written alt text for every problem image from the
-spreadsheets authors write in through to the page a screen reader reads.
+I tested the lab's GPT-4o alt-text generator against the original graphs before it ran on more
+courses. It misread coordinates, endpoints, and open versus closed points, so its output stayed out
+of the course content, and my project carries hand-written alt text through to the page instead.
 
 **KG-Microbe trait tables** &nbsp;<sub>Berkeley Lab · merged</sub><br>
-The lab's pipeline connects published human-microbiome studies to a knowledge graph, so you can ask
-what the microbes that shift in a disease have in common. I wrote the step that turns each study's
-results into a trait table, 319 experiments across 127 traits, and it was reviewed and merged.
+I wrote the step in the lab's pipeline that turns each published microbiome study into a trait
+table you can compare across diseases, 319 experiments across 127 traits. It was reviewed and merged.
 
 ### Agents
 
 **[Overclock](https://github.com/NoelSason/Overclock)** &nbsp;<sub>Cal Hacks 13.0</sub><br>
 Browser agents usually ask a model what to do before every click. Overclock plans a task once,
-compiles it into a program, and replays the program, reading the page back to confirm every change.
-On the hackathon's mock apps, graded by its own checker, it reconciled 500 of 500 records in a warm
-median of 13.8 s, and a second runtime that imported the first one's compiled workflow finished
-without a planning call. It hasn't been tried on a site it has never seen, behind a login, or
-against a published benchmark.
+compiles it into a program, and replays it, reading the page back to confirm every change. On the
+hackathon's mock apps, graded by its own checker, it reconciled 500 of 500 records in a warm median
+of 13.8 s. It hasn't been tried on unfamiliar sites, behind a login, or on a published benchmark.
 
 **Noel MCP** &nbsp;<sub>private</sub><br>
-One server that every assistant I use connects to, so they all reach the same twenty-odd places I
-work, from mail and repositories to the literature search and the cluster. Reading is free, and
-anything that sends, publishes, or changes something waits until I approve that exact action.
-Running my own tools through an approval queue has taught me more about letting an agent act safely
-than reading about it did.
+One server that all my assistants connect to, covering about twenty services from mail to the
+compute cluster. Reading is free, and anything that sends, publishes, or changes something waits
+for my approval of that exact action. Running my own tools through that queue has taught me more
+about letting an agent act safely than reading about it did.
 
 **[ios-agent-use](https://github.com/NoelSason/ios-agent-use)** &nbsp;<sub>open source · Claude Code plugin</sub><br>
 Lets a coding agent open a real iOS app, tap through it, and read back what changed on screen.
@@ -121,9 +114,9 @@ automate everything around learning without automating the learning itself.
   tries what it has already learned, then a table of rules, and asks a model only about labels the
   rules can't settle. The build fails if any of about 850 labelled cases regresses.
 - [Blink2Talk](https://github.com/NoelSason/blink2talk) lets someone who is awake but can't speak or
-  use their hands pick a reply by looking at it and holding their eyes closed. Four of us built it
-  at Cal Hacks 13.0, and I wrote the patient screen, the care panel, and the eye-input layer. It is
-  a prototype and has never been used with a patient.
+  use their hands pick a reply with their eyes. I wrote the patient screen, the care panel, and the
+  eye-input layer for our Cal Hacks 13.0 team of four. It's a prototype and has never been used with
+  a patient.
 - [Texting Stats](https://github.com/NoelSason/texting-stats) and
   [iMessage Wrapped](https://github.com/NoelSason/imessage-wrapped) analyze a Messages history on
   your own Mac, and nothing is uploaded.
