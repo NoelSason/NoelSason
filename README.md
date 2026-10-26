@@ -1,311 +1,171 @@
-<!-- ══════════════════════════ HEADER ══════════════════════════ -->
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=0:1a1b27,50:414868,100:70a5fd&text=Noel%20Sason&fontColor=c0caf5&fontSize=64&fontAlignY=36&desc=Builder%20·%20Student%20·%20Founder&descAlignY=57&descSize=18&animation=fadeIn" alt="Noel Sason" />
-</p>
-
-<p align="center">
-  <a href="https://readme-typing-svg.demolab.com">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=3200&pause=900&color=70A5FD&center=true&vCenter=true&width=760&lines=Molecular+%26+Cell+Biology+%2B+Data+Science+%40+Berkeley;Building+the+LMS+where+students+actually+do+the+work;Ink%2C+notebooks%2C+and+a+real+shell+%E2%80%94+running+on+an+iPad;I+think+in+systems.+I+care+about+execution.+I+ship." alt="Typing SVG" />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/UC_Berkeley-003262?style=for-the-badge&logo=googlescholar&logoColor=FDB515" alt="UC Berkeley" />
-  <img src="https://img.shields.io/badge/MCB_+_Data_Science-414868?style=for-the-badge" alt="MCB + Data Science" />
-  <img src="https://img.shields.io/badge/Class_of_2028-70a5fd?style=for-the-badge&logoColor=white" alt="Class of 2028" />
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=NoelSason&label=Profile%20views&color=70a5fd&style=flat-square" alt="Profile views" />
-  <a href="https://github.com/NoelSason?tab=followers"><img src="https://img.shields.io/github/followers/NoelSason?label=Followers&style=flat-square&color=70a5fd" alt="Followers" /></a>
-</p>
-
-<!-- ══════════════════════════ SNAKE ══════════════════════════ -->
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake-dark.svg?v=2" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake.svg?v=2" />
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/NoelSason/NoelSason/output/github-snake.svg?v=2" width="100%" />
-  </picture>
-</p>
-
----
-
-I'm studying **Molecular & Cell Biology + Data Science** at UC Berkeley. I build products that fix
-broken workflows for the people who have to live inside them — students, clinicians, litigants.
-
-Most of my time goes to **Scope**, with RxBrief and a handful of smaller tools shipped alongside it.
-
-<!-- ══════════════════════════ BUILDING ══════════════════════════ -->
-
-<h2 align="center">═══ ✦ What I'm Building ✦ ═══</h2>
-
-### 🎓 Scope &nbsp;<sub><sup>(formerly Canvascope)</sup></sub>
-
-> **Canvas is the system of record. Scope is the system of work.**
-
-Learning management systems are where instructors *post* things. The actual work happens somewhere
-else — readings annotated in GoodNotes, writing in Docs, code in VS Code, questions asked in
-ChatGPT — and the LMS only ever sees the final upload.
-
-Scope makes the course itself the workspace. It enters through the LMS a school already runs, and the
-direction it's heading is one where every discipline gets the environment it actually needs — a
-repository and a terminal for CS, ink and replay for math, papers and lab notebooks for biology.
-
-Three surfaces, one workspace:
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-**📓 [Lectra](https://apps.apple.com/us/app/lectra-notes/id6759754531)**<br/>
-<sub>iPad · **live on the App Store**</sub>
-
-The high-fidelity client. Pencil-first markup on documents, notebooks beside them, and — when the
-reading turns into work — a real Python kernel, shell, and Git.
-
-</td>
-<td width="33%" valign="top">
-
-**🔍 The Extension**<br/>
-<sub>Chrome MV3 · local-first</sub>
-
-The distribution wedge. Indexes assignments, files, and modules locally, answers questions with
-citations, and hands PDFs off to Lectra.
-
-</td>
-<td width="33%" valign="top">
-
-**🧭 [Polya](https://askpolya.com)**<br/>
-<sub>Next.js · Supabase</sub>
-
-Course-aware tutoring that helps students *learn* — hints and guided steps, never just answers.
-Named for George Pólya.
-
-</td>
-</tr>
-</table>
-
-**Some things I'm proud of in here:**
-
-- **Lectra runs a computer on an iPad.** iOS has no `exec`, so anything that would normally be a
-  subprocess had to be written from scratch or embedded as WebAssembly — a hand-built shell, Git,
-  and Python runtime, all on-device and offline. Plus SSH, and Mac↔iPad remote desktop over WebRTC.
-- **Ink is vector, never raster.** Strokes are stored normalized to 0…1 of the page, so zoom only
-  changes `contentsScale` and a stroke copied between differently-sized pages still lands correctly.
-  In-progress strokes are split into sealed 64-point chunk layers, making drawing O(1) per frame
-  instead of O(stroke length).
-- **`.lectra` is a file package that can't drift** — simultaneously the on-disk representation *and*
-  the interchange format, so there's no export layout to fall out of sync. Instructor and student
-  layers never cross, which is what makes "the professor reissues the packet, you keep your notes"
-  possible at all.
-- **Polya cites everything.** Every claim traces back to the exact page, slide, or lecture moment it
-  came from, and instructors set the assistance level per course.
-
-<sub>`Swift 6` · `SwiftUI + UIKit` · `Chrome MV3` · `Next.js` · `Supabase` · `WebRTC` · `WebAssembly` · `Offline-first`</sub>
-
-<sub>📊 As of October 2026 — 400+ students across 20+ colleges and universities · 58,000+ course files, pages, and assignments synced. Free for students; there's no paid tier.</sub>
-
----
-
-### 💊 [RxBrief](https://medsphere-nu.vercel.app)
-
-**One tool instead of ten tabs, for clinicians.**
-
-Every feature was scoped directly from interviews with healthcare professionals — it solves the
-problems they actually named.
-
-- Instant FDA-sourced label data — indications, dosing, interactions — instead of digging through PDF inserts
-- Job openings from Greenhouse, Lever, and RSS normalized into one server-filtered feed
-- Real-time Supabase chat keeping the conversation in-app
-
-<sub>`Next.js` · `React` · `TypeScript` · `Supabase` · `openFDA API`</sub>
-
----
-
-### ⚖️ [SCI Cause-List Alerts](https://india-case-status-omega.vercel.app)
-
-**Closing an information gap for Indian Supreme Court litigants.**
-
-Rather than requiring a lawyer or a daily manual lookup, a scheduled worker checks whether a
-subscriber's case is on tomorrow's cause list and emails them proactively — built for people without
-easy access to legal counsel.
-
-- Daily worker parses government-published cause-list PDFs against subscriber watch-lists
-- Idempotent, audited delivery with self-monitoring that flags failed runs
-- Bot-protected signup (Cloudflare Turnstile) and IP rate limiting (Upstash Redis)
-
-<sub>`Next.js` · `TypeScript` · `Prisma` · `PostgreSQL` · `Upstash Redis` · `Resend`</sub>
-
-<!-- ══════════════════════════ RESEARCH ══════════════════════════ -->
-
-<h2 align="center">═══ ✦ Research ✦ ═══</h2>
-
-### 🧬 Lawrence Berkeley National Laboratory
-
-**Research Affiliate — Arkin Lab / CultureBotAI (BBOP)**
-
-I build the pipelines that turn noisy, heterogeneous biological records into structured datasets
-other people can actually run analyses on.
-
-- A **DuckDB traversal pipeline over the `kg-microbe` knowledge graph** — METPO ontology terms,
-  CHEBI chemicals, ENVO environments, UBERON anatomical sites — making SQL queries across **80+
-  microbiome studies** fast
-- Automated study onboarding from BugSigDB differential-abundance exports into per-study directories
-  with taxa linked to NCBI Taxon IDs, covering colorectal cancer, lung cancer, epilepsy, and skin wounds
-- A YAML-driven trait-profile generator emitting wide and long TSVs for downstream statistics
-- Standardized environments with `uv` and Justfile task runners
-
-<sub>`Python` · `DuckDB` · `Ontologies` · `uv` · `Just`</sub>
-
-### 🧮 Computational Approaches to Human Learning Lab, UC Berkeley
-
-**Undergraduate Researcher — OATutor**
-
-[OATutor](https://github.com/CAHLR/OATutor) is the lab's open-source adaptive math tutor. It uses
-**Bayesian Knowledge Tracing** to estimate what each student has mastered: after every answer it
-updates the probability that they know each skill, weighing the chance they guessed or slipped, and
-it serves the problem they're weakest on until every skill clears a 0.85 mastery threshold.
-
-- My project: per-image alt text for screen-reader users, carried from the spreadsheets authors
-  write in, through the Python scripts that compile them into problem files, to the React components
-  that render problems, steps, and hints
-- Tested the lab's GPT-4o alt-text generator against the original graphs before it ran on more
-  courses. It misread coordinates, endpoints, and open vs. closed points, so its output stayed out of
-  the course content
-
-<sub>`Python` · `React` · `Bayesian Knowledge Tracing` · `Accessibility`</sub>
-
-### 🧠 Imagined-Speech EEG Benchmark Audit &nbsp;<sub>[paper](https://noelsason.com/papers/sason-2026-imagined-speech-eeg-audit.pdf) · [code](https://github.com/NoelSason/eegwords)</sub>
-
-A published benchmark reports **13.88%** accuracy at telling 39 categories of imagined words apart
-from EEG. Copying the label of the previous training trial, with no EEG at all, scores **18.8%**,
-because the trials run in category clusters and every test trial sits inside a training run.
-
-- Simple per-trial EEG statistics identify a held-out trial's recording run with 98.8% accuracy
-- With whole runs held out, real labels beat shuffled ones by only 0.64 points, within seed noise
-- Every number in the paper is generated from saved results and traced claim by claim
-
-<sub>One participant, self-published, not peer reviewed. `PyTorch` · `Experiment design` · `Evaluation`</sub>
-
-<sub>🔬 Plus something early I'm not talking about yet.</sub>
-
-<!-- ══════════════════════════ OPEN SOURCE ══════════════════════════ -->
-
-<h2 align="center">═══ ✦ Open Source ✦ ═══</h2>
-
-- **[PyodideKit](https://github.com/NoelSason/PyodideKit)** — real Python inside an iPhone, iPad,
-  or Mac app, with no server and no network. NumPy, pandas, matplotlib, and offline `pip install`
-  all work. Pulled out of Lectra, where it runs for real users. <sub>`Swift` · `WebAssembly` · MIT</sub>
-- **[ios-agent-use](https://github.com/NoelSason/ios-agent-use)** — lets a coding agent open a real
-  iOS app, tap through it, and get back a written account of what changed on screen. Installs as a
-  Claude Code plugin. <sub>`Python` · `XCUITest` · MIT</sub>
-
-<!-- ══════════════════════════ COMMUNITY ══════════════════════════ -->
-
-<h2 align="center">═══ ✦ Community ✦ ═══</h2>
-
-- **[South Indian Society @ Berkeley](https://sisberkeley.org)** — Co-President. Built the org's
-  website and a native SwiftUI app for **200+ members**, replacing four fragmented tools with
-  role-aware access, Stripe ticketing, and realtime updates.
-- **[SaRiGaMa Check-In](https://scv-sarigama-checkin.vercel.app)** — digital Sadhya check-in built
+<!-- Figures are generated: edit assets/build.py, then run `python3 assets/build.py`. -->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/header-light.svg">
+  <img alt="Noel Sason. UC Berkeley, Molecular and Cell Biology + Data Science, 2028. How do you know a model does what its number says?" src="assets/header-light.svg" width="100%">
+</picture>
+
+I study molecular and cell biology and data science at UC Berkeley, and I'm interested in how you
+check that a model can actually do what its score says it can. So far that has meant auditing a
+benchmark, pre-registering a fine-tuning experiment, and building agents that verify their own
+work. Longer term I want to work where AI and biology meet, on keeping models that are good at
+biology from making it easier to misuse.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/table-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/table-light.svg">
+  <img alt="Table 1. What I am working on, October 2026. Lewis Lab, UC Berkeley: peptide design for a mitochondrial RNA-degradation complex (learning). CAHL Lab, UC Berkeley: alt text for every problem image in OATutor (building). Berkeley Lab: microbe traits across disease studies, on KG-Microbe (analysis). Scope Tutor-1: does QLoRA on tutoring dialogues beat a good prompt? (training). Scope: Lectra, Polya, and the extension, used by 400+ students (shipping)." src="assets/table-light.svg" width="100%">
+</picture>
+
+### Research
+
+**Trial order, recording time, and checkpoint selection in a 39-way imagined-speech EEG benchmark**<br>
+<sub>Noel Sason · 2026 · self-published, not peer reviewed · [paper](https://noelsason.com/papers/sason-2026-imagined-speech-eeg-audit.pdf) · [code](https://github.com/NoelSason/eegwords)</sub><br>
+The published accuracy on this benchmark is 13.88%. Copying the label of the previous training
+trial, with no EEG at all, scores 18.8%, because the trials run in category clusters and every test
+trial sits inside a training run. With whole runs held out, real labels beat shuffled ones by 0.64
+points, which is within seed noise. One participant.
+
+<details>
+<summary><sub>cite</sub></summary>
+
+```bibtex
+@misc{sason2026eeg,
+  title  = {Trial order, recording time, and checkpoint selection
+            in a 39-way imagined-speech {EEG} benchmark},
+  author = {Sason, Noel},
+  year   = {2026},
+  note   = {Self-published, not peer reviewed},
+  url    = {https://github.com/NoelSason/eegwords}
+}
+```
+
+</details>
+
+**Scope Tutor-1** &nbsp;<sub>post-training · in progress</sub><br>
+Does QLoRA fine-tuning on tutoring dialogues make Qwen3-4B a better tutor than the same model with
+a well-written prompt? The prompt it has to beat is frozen, no test problem appears in training,
+and the endpoint was written down before any model was trained. Runs are going now on MLX, nothing
+has been scored on the held-out problems, and the prompt may well win.
+
+**Fabric** &nbsp;<sub>self-supervised vision · null result</sub><br>
+A pre-registered test of an uncertainty-routing method across eight seeds. It found no supported
+improvement from hierarchical targets under the tested protocol, so I closed the study with the
+results and analysis written up. Synthetic data only, and no real-image result is claimed.
+
+**Checking a model's alt text** &nbsp;<sub>CAHL Lab · [OATutor](https://github.com/CAHLR/OATutor)</sub><br>
+Before the lab's GPT-4o alt-text generator ran on more courses, I tested it against the original
+graphs. It misread coordinates, endpoints, and open versus closed points, so its output stayed out
+of the course content. My project carries hand-written alt text for every problem image from the
+spreadsheets authors write in through to the page a screen reader reads.
+
+**KG-Microbe trait tables** &nbsp;<sub>Berkeley Lab · merged</sub><br>
+The lab's pipeline connects published human-microbiome studies to a knowledge graph, so you can ask
+what the microbes that shift in a disease have in common. I wrote the step that turns each study's
+results into a trait table, 319 experiments across 127 traits, and it was reviewed and merged.
+
+### Agents
+
+**[Overclock](https://github.com/NoelSason/Overclock)** &nbsp;<sub>Cal Hacks 13.0</sub><br>
+Browser agents usually ask a model what to do before every click. Overclock plans a task once,
+compiles it into a program, and replays the program, reading the page back to confirm every change.
+On the hackathon's mock apps, graded by its own checker, it reconciled 500 of 500 records in a warm
+median of 13.8 s, and a second runtime that imported the first one's compiled workflow finished
+without a planning call. It hasn't been tried on a site it has never seen, behind a login, or
+against a published benchmark.
+
+**Noel MCP** &nbsp;<sub>private</sub><br>
+One server that every assistant I use connects to, so they all reach the same twenty-odd places I
+work, from mail and repositories to the literature search and the cluster. Reading is free, and
+anything that sends, publishes, or changes something waits until I approve that exact action.
+Running my own tools through an approval queue has taught me more about letting an agent act safely
+than reading about it did.
+
+**[ios-agent-use](https://github.com/NoelSason/ios-agent-use)** &nbsp;<sub>open source · Claude Code plugin</sub><br>
+Lets a coding agent open a real iOS app, tap through it, and read back what changed on screen.
+
+### Scope
+
+**[Scope](https://canvascope.org)** &nbsp;<sub>founder, sole developer · 400+ students at 20+ colleges · 58,000+ course items synced</sub><br>
+Student software built around the courses students already have. The rule I build by is to
+automate everything around learning without automating the learning itself.
+
+- [Lectra](https://apps.apple.com/us/app/lectra-notes/id6759754531) is an iPad app for marking up
+  PDFs with Apple Pencil, and it runs Python, git, and a shell on the device itself.
+- [Polya](https://askpolya.com) tutors from your own course materials, gives hints instead of
+  answers, and cites the page, slide, or lecture moment behind every claim.
+- [The extension](https://chromewebstore.google.com/detail/canvascope/bamoelobnoepklagbcokjnlipfhcfdbb)
+  searches your Canvas and Brightspace courses and answers with citations, and the index stays on
+  your machine.
+- [PyodideKit](https://github.com/NoelSason/PyodideKit) is the Python runtime from Lectra as an open
+  source Swift package, with NumPy, pandas, and offline `pip install` working in any iOS or Mac app.
+
+<details>
+<summary>Engineering notes</summary>
+<br>
+
+- iOS has no `exec`, so everything Lectra would normally run as a subprocess (the shell, git, and
+  Python) is written from scratch or embedded as WebAssembly, and all of it runs offline.
+- Ink is stored as vectors normalized to the page, so zooming only changes the render scale. Strokes
+  in progress are split into sealed 64-point chunks, which keeps drawing O(1) per frame.
+- A `.lectra` file is both the on-disk format and the interchange format, so there is no export to
+  drift out of sync. Instructor and student layers never mix, which is what lets a professor reissue
+  a packet while you keep your notes.
+
+</details>
+
+### Open source
+
+- [Control](https://github.com/NoelSason/CommandSquared) is a smart paste for the whole Mac. It
+  tries what it has already learned, then a table of rules, and asks a model only about labels the
+  rules can't settle. The build fails if any of about 850 labelled cases regresses.
+- [Blink2Talk](https://github.com/NoelSason/blink2talk) lets someone who is awake but can't speak or
+  use their hands pick a reply by looking at it and holding their eyes closed. Four of us built it
+  at Cal Hacks 13.0, and I wrote the patient screen, the care panel, and the eye-input layer. It is
+  a prototype and has never been used with a patient.
+- [Texting Stats](https://github.com/NoelSason/texting-stats) and
+  [iMessage Wrapped](https://github.com/NoelSason/imessage-wrapped) analyze a Messages history on
+  your own Mac, and nothing is uploaded.
+
+<details>
+<summary>More projects</summary>
+<br>
+
+- Lectra Intelligence is a vision-language model running on one Mac, with its own harness, chat
+  app, evaluation suite, and a probe that measures how often it refuses. Nothing calls a cloud API.
+- PersonalGraph is a local memory server for AI assistants that stores what it knows as a graph and
+  tags each fact with where it came from.
+- [NeuroToTheEuro](https://github.com/NoelSason/neurototheeuro) asks whether a model trained on many
+  people's EEG transfers to a new person without retraining. It is set up on a 33-subject public
+  dataset, and the transfer evaluation is still to run.
+- [CLENS](https://github.com/NoelSason/clens) scores grocery receipts on ocean health, from
+  DataHacks 2026.
+- SCI Cause-List Alerts watches the Supreme Court of India's daily hearing list and emails a
+  litigant when their case appears. It is finished and has never been deployed.
+- [RxBrief](https://medsphere-nu.vercel.app) is an FDA label lookup for clinicians, still a demo.
+- Sites for [South Indian Society](https://sisberkeley.org), [St. Mary's](https://www.stmaryschurchla.org),
+  and [SCV SaRiGaMa](https://scvsarigama.com), plus a [check-in app](https://scv-sarigama-checkin.vercel.app)
   for Onam 2026.
-- **[St. Mary's Church](https://church-new.vercel.app)** — parish site, plus a Python/SQLite ledger
-  system handling families, charges, partial payments, and remaining balances.
+- A Raspberry Pi homelab that backs up my machines, blocks ads for the house, and sends me a 7am
+  brief.
 
-<!-- ══════════════════════════ STACK ══════════════════════════ -->
+</details>
 
-<h2 align="center">═══ ✦ Stack ✦ ═══</h2>
+<details>
+<summary>Outside the lab</summary>
+<br>
 
-<p align="center">
-  <b>Languages</b><br/>
-  <img src="https://img.shields.io/badge/Swift-F05138?style=for-the-badge&logo=swift&logoColor=white" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
-</p>
+- Co-President, South Indian Society at UC Berkeley, a club of more than 200 members
+- Finance Director, ASUC, administering about $200,000 in student-organization funding
+- COPE Health Scholar, Kaiser Permanente, since 2025
+- Community Service Officer, UC Berkeley Police Department, 2024 to 2026
+- State Secretary, California HOSA, 2023 to 2024
 
-<p align="center">
-  <b>Frontend &amp; Mobile</b><br/>
-  <img src="https://img.shields.io/badge/SwiftUI-0071E3?style=for-the-badge&logo=swift&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/Chrome_MV3-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" />
-</p>
+</details>
 
-<p align="center">
-  <b>Backend &amp; Data</b><br/>
-  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" />
-  <img src="https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" />
-  <img src="https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-</p>
+<br>
 
-<p align="center">
-  <b>ML &amp; Scientific</b><br/>
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/ONNX-005CED?style=for-the-badge&logo=onnx&logoColor=white" />
-</p>
+`python` `pytorch` `mlx` `swift` `typescript` `sql` `duckdb` `slurm`
 
-<p align="center">
-  <b>Infrastructure</b><br/>
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-</p>
-
-<!-- ══════════════════════════ BEYOND CODE ══════════════════════════ -->
-
-<h2 align="center">═══ ✦ Beyond Code ✦ ═══</h2>
-
-Before I was building software, I was building systems.
-
-- **California HOSA State Secretary (2023–2024)** — statewide operations, conference logistics, and
-  sponsor correspondence across California chapters
-- **ASUC Finance Director** — administered roughly **$200,000** in student-org funding across
-  allocations, grants, and waivers; tracked 89+ deadlines with zero compliance violations, and
-  redesigned reconciliation to cut reimbursement processing time ~40%
-- **Kaiser Permanente COPE Health Scholar** — clinical intern across 5+ departments. Hospital
-  workflow experience fed directly into how RxBrief got scoped
-- I run a **Raspberry Pi homelab** — NAS, Tailscale mesh, Pi-hole, and a pile of self-hosted tooling,
-  because the best way to learn infrastructure is to be on call for your own
-
-I think in systems. I care about execution. I ship.
-
-<!-- ══════════════════════════ STATS ══════════════════════════ -->
-
-<h2 align="center">═══ ✦ The Grind ✦ ═══</h2>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=NoelSason&theme=tokyonight&hide_border=true&background=1A1B27&ring=70A5FD&fire=BF91F3&currStreakLabel=70A5FD&sideLabels=C0CAF5&dates=8B8CAD" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=NoelSason&theme=tokyo-night&hide_border=true&bg_color=1A1B27&color=70A5FD&line=BF91F3&point=C0CAF5&area=true" alt="Contribution Graph" width="100%" />
-</p>
-
-<!-- ══════════════════════════ CONNECT ══════════════════════════ -->
-
-<h2 align="center">═══ ✦ Let's Connect ✦ ═══</h2>
-
-<p align="center">
-  <a href="mailto:noel_sason@berkeley.edu"><img src="https://img.shields.io/badge/Email-noel__sason@berkeley.edu-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://noelsason.com"><img src="https://img.shields.io/badge/Website-noelsason.com-70a5fd?style=for-the-badge&logo=safari&logoColor=white" alt="Website" /></a>
-  <a href="https://linkedin.com/in/noelsason"><img src="https://img.shields.io/badge/LinkedIn-Noel_Sason-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/NoelSason"><img src="https://img.shields.io/badge/GitHub-NoelSason-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=140&color=0:70a5fd,50:414868,100:1a1b27&reversal=true" alt="" />
-</p>
+<sub>Looking for research roles for summer 2027 · [noelsason.com](https://noelsason.com) · [noel_sason@berkeley.edu](mailto:noel_sason@berkeley.edu) · [LinkedIn](https://linkedin.com/in/noelsason) · [CV](https://noelsason.com/resume.pdf)</sub>
